@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MENU</title>
+	</head>
+	<body style="background-color:#e65e5e;">
+		<div id="logo">
+			<a href="home.html"><img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/275778808_2453648821438924_4321857223295719836_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=PUGf_Ok69n4AX-wS7yO&_nc_ht=scontent-mia3-1.xx&oh=00_AfAC_IS6-s1VbZQyIlp7f-CvmYvaIhyJAvdyhRD32XxrRA&oe=641286CF"width="100" height="100" align="middle" /></a>
+		</div>
+		<div id="header">
+			<a href="home.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">Home</a>
+			<a href="menu.html" style="text-decoration: none; color:orange; font-size:25px; font-family:Broadway">Menu</a>
+			<a href="order.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">Order</a>
+			<a href="contact.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">About Us</a>
+		</div>
+		<h1 align="center">Menu</h1>
+		<img src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.6435-9/65643209_1537238483079967_4734803983271460864_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=9eOyCP56LIIAX-3swi-&_nc_ht=scontent-mia3-2.xx&oh=00_AfDgSgTXAqxFvi8LOwaqSGxP1bja-aq94-HTL8KKKOK0Dg&oe=6435FB5A" width="100" height="100" align="left">
+		<div class="details">
+			<h2 class="food_name" id="n1">New Awlins Pasta</h2>
+			<p>Description of Food</p>
+			<p>Price: $<span class="price" id="p1">5.00</span></p>
+			<button class="order_btn" id="b1" onclick="addToOrder('b1','n1','p1')">add to order</button>
+			<hr color="#000000/">
+		</div> 
+		<img src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.6435-9/90087140_1783071235163356_6838379059617988608_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=UkxnzGttesIAX9BfuR8&_nc_ht=scontent-mia3-2.xx&oh=00_AfCu-IqceiZ-Sd6ttPIVJqv2YMIFkoIBxOm_2GbnwxLSHA&oe=6435EF16" width="100" height="100" align="left">
+		<div class="details">
+			<h2 class="food_name" id="n2">Seafood Fritters</h2>
+			<p>Description of Food</p>
+			<p>Price: $<span class="price" id="p2">10.00</span></p>
+			<button class="order_btn" id="b2" onclick="addToOrder('b2','n2','p2')">add to order</button>
+			<hr color="#000000/">
+		</div> 
+		<img src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.6435-9/89003029_1783071181830028_815857616587587584_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=_fMeBkN7_rYAX9kPShD&_nc_ht=scontent-mia3-2.xx&oh=00_AfDE2nltTCGcoYtQ-7xlIzvrN63SyfVXzIS-qzi-k8kPmg&oe=6435E2B4" width="100" height="100" align="left">
+		<div class="details">
+			<h2 class="food_name" id="n3">Mozzarella Balls</h2>
+			<p>Description of Food</p>
+			<p>Price: $<span class="price" id="p3">10.00</span></p>
+			<button class="order_btn" id="b3" onclick="addToOrder('b3','n3','p3')">add to order</button>
+			<hr color="#000000/">
+		</div> 
+		<img src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.6435-9/106988274_1898052696998542_5887863680879008046_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=E9Ge20qdh68AX9fnX6s&_nc_ht=scontent-mia3-2.xx&oh=00_AfBBoXNNHSv4fJLy8BlpGCoiy655qJxsNgnpJIPljqT1fg&oe=6435E88E" width="100" height="100" align="left">
+		<div class="details">
+			<h2 class="food_name" id="n4">Palm Beach Wings</h2>
+			<p>Description of Food</p>
+			<p>Price: $<span class="price" id="p4">15.00</span></p>
+			<button class="order_btn" id="b4" onclick="addToOrder('b4','n4','p4')">add to order</button>
+			<hr color="#000000/">
+		</div> 
+		<script>
+			function addToOrder(button, name, price){
+				document.getElementById(button).addEventListener("click", addIt);
+				function addIt(event){
+					event.preventDefault();
+					var n = document.getElementById(name).innerText;
+					localStorage.setItem('name', n);
+					var p = document.getElementById(price).innerText;
+					localStorage.setItem('price', p);
+				};
+			};
+		</script>
+		<style type="text/css">
+			#logo{text-align: center;}
+			#header{
+				display: block;
+				margin: 0px auto 0px auto;
+				border-top: 2px solid #000000;
+				border-bottom: 1px solid #000000;
+				text-align: center;}
+			a{margin: 0px 100px;}
+			h1{text-shadow: 2px 2px 7px #3A3A3A}
+			.order_btn{color: #000000; background-color: #F3C879; text-align: right;}
+		</style>
+
+
+	</body>
+</html>

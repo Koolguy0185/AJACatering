@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ORDER</title>
+		<script>
+		var para = [];
+		var button = [];
+		var count = 0;
+		let total = 0;
+		window.onload = function () {
+				for(let i = count; i<= 5; i++){
+					if(para[i] != null){
+						continue;
+					}else if(para[i] == null){
+						para[i] = document.createElement('p');
+						para[i].textContent = localStorage.getItem('name')+"......................  $"+localStorage.getItem('price');
+						document.getElementById('orders').appendChild(para[i]);
+						btn[i] = document.createElement('button');
+						btn[i].textContent =  'Remove';
+						<!btn[i].onclick = removeOrder();>
+						document.getElementById('orders').appendChild(btn[i]);
+						total = total + Number(localStorage.getItem('price'));
+						document.getElementById('total').innerText = total;
+						break;
+					};
+					count = count + 1;
+				};
+		};
+		<!function removeOrder(){
+			
+		}>
+		</script>
+		<?php
+			if(isset($_POST['sub'])){
+				$name = $_POST['name'];
+       			$email = $_POST['email'];
+				$num = $_POST['num'];
+				$accom = $_POST['accom'];
+       			$date = $_POST['date'];
+				$descrip = $_POST['descrip'];
+				$size = $_POST['size'];
+				$cost= $_POST['cost'];
+				$food= $_POST['food'];
+    			}
+
+			$dbServername = "0151CN3QHB2\SQLEXPRESS";
+			$dbUsername = "sa";
+			$dbPassword = "suncoast";
+			$dbName = "ajaCateringData";
+
+			$conn = mysqli_connect( $dbServername , $dbUsername , $dbPassword , $dbName );
+			$sql = "INSERT INTO customer_info(id, customer_name, customer_order, customer_email, customer_phone, special_accom, total_price, event_date, event_descrip, approx_size) VALUES ('1', '$name', '$food', '$email', '$num', '$accom','$cost' ,'$date', '$descrip', '$size')";
+			$rs = mysqli_query($con, $sql);
+  
+		?>
+	</head>
+	<body style="background-color:#e65e5e;">
+		<div id="logo">
+			<a href="home.html"><img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/275778808_2453648821438924_4321857223295719836_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=PUGf_Ok69n4AX-wS7yO&_nc_ht=scontent-mia3-1.xx&oh=00_AfAC_IS6-s1VbZQyIlp7f-CvmYvaIhyJAvdyhRD32XxrRA&oe=641286CF"width="100" height="100" align="middle" /></a>
+		</div>
+		<div id="header">
+			<a href="home.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">Home</a>
+			<a href="menu.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">Menu</a>
+			<a href="order.html" style="text-decoration: none; color:orange; font-size:25px; font-family:Broadway">Order</a>
+			<a href="contact.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">About Us</a>
+		</div>
+		<h1 align="center">Order</h1>
+		<p> Your Order: </p>
+		<div id= "orders" name = "food"></div><br />
+		<p>Total: $<span id="total" name="cost"></span></p>
+		<div id= "customer_info">
+			<form action = "" method ="get">
+				<fieldset>
+					<legend>Customer Information</legend>
+					<label>Name (first last):*<br />
+					<input type ="text" name="name"/></label><br />
+					<label>Email: *<br />
+					<input type ="text" name="email"/></label><br />
+					<label>Phone Number:*<br />
+					<input type ="text" name="num"/></label><br />
+					<label>Special Accommodations:<br />
+					<input type ="text" name="accom"/></label><br /><br />
+					<legend>Fill only if choosing catering:</legend><br />
+					<label>Description of Event(ex. wedding, birthday, ect.)<br />
+					<input type="text" name= "descrip"/></label><br />
+					<label>Approx. size of guests(ex. 20-30 people):<br />
+					<input type = "text" name="size"/></label><br />
+					<label>Date of Event(must be at least a month prior):<br />
+					<input type = "date" name="date"/></label><br />
+					<input type= "submit" value="Submit Order" name="sub"/>
+				</fieldset>
+			</form>
+		</div>				
+	</body>
+	<style type="text/css">
+			#logo{text-align: center;}
+			#header{
+				display: block;
+				margin 0px auto 0px auto;
+				border-top: 2px solid #000000;
+				border-bottom: 1px solid #000000;
+				text-align: center;}
+			a{margin: 0px 100px;}
+			h1{text-shadow: 2px 2px 7px #3A3A3A}
+			fieldset{width: 250px; border: 1px solid #000000; border-radius: 8px;}
+			#sub{text-align: right;}
+		</style>	
+</html>
+
+

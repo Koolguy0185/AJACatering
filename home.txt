@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AJA Catering & More</title>
+	</head>
+	<body style="background-color:#e65e5e;">
+		<div id="logo">
+			<a href="home.html"><img src="https://scontent-mia3-1.xx.fbcdn.net/v/t39.30808-6/275778808_2453648821438924_4321857223295719836_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=PUGf_Ok69n4AX-wS7yO&_nc_ht=scontent-mia3-1.xx&oh=00_AfAC_IS6-s1VbZQyIlp7f-CvmYvaIhyJAvdyhRD32XxrRA&oe=641286CF"width="100" height="100" align="middle" /></a>
+		</div>
+		<div id="header">
+			<a href="home.html" style="text-decoration: none; color:orange; font-size:25px; font-family:Broadway">Home</a>
+			<a href="menu.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">Menu</a>
+			<a href="order.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">Order</a>
+			<a href="contact.html" style="text-decoration: none; color:black; font-size:25px; font-family:Broadway">About Us</a>
+		</div>
+		<h1 align="center">Welcome to AJA Catering & More!</h1>
+		<h3 style="color:orange" align="center"><u><i>SERVING HEAT IS WHAT WE DO BEST!</i></u></h3>
+		
+<img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.6435-9/91649183_1804635216340291_3203724730104283136_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9267fe&_nc_ohc=OrDo0d5_5HsAX_dc9rA&_nc_ht=scontent-mia3-1.xx&oh=00_AfCFNQ7u-3Gzj5UkqpRAXwNJ5AIdoDPT5BORYwrA9Mco4Q&oe=6435E722" width="200" height="200" align="left"/>
+<img src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.6435-9/106988274_1898052696998542_5887863680879008046_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=E9Ge20qdh68AX9fnX6s&_nc_ht=scontent-mia3-2.xx&oh=00_AfBBoXNNHSv4fJLy8BlpGCoiy655qJxsNgnpJIPljqT1fg&oe=6435E88E" width="200" height="250"/>
+<img src="https://scontent-mia3-2.xx.fbcdn.net/v/t1.6435-9/75224741_1641679045969243_5455945678217805824_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9267fe&_nc_ohc=C2q7Yrma30gAX9-zb2a&_nc_ht=scontent-mia3-2.xx&oh=00_AfAu_UV07F_9hGPe4rl1RnBiPu9YuMo1qx7mfL2bvfEZNA&oe=6435E5C9" width="200" height="200" align="right"/>
+
+		<style type ="text/css">
+			#logo{text-align: center;}
+			#header{
+				display: block;
+				margin 0px auto 0px auto;
+				border-top: 2px solid #000000;
+				border-bottom: 1px solid #000000;
+				text-align: center;}
+			a{margin: 0px 100px;}
+			h1{text-shadow: 2px 2px 7px #3A3A3A}
+			h3{text-shadow: 2px 2px 7px #AE0000}
+		</style>
+	</body>
